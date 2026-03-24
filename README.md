@@ -65,7 +65,7 @@
 
 ## 🎁 免费 AI 接口
 
-> **零成本接入主流 AI 模型！** 我们内部搭建的公益平台，无限 Token 流量，超级省钱！
+> **内部公益平台，免费使用主流 AI 模型！** 签到领额度，邀请得更多，持续免费用 AI！
 
 <p align="center">
   <a href="https://gpt.qt.cool/"><img src="https://img.shields.io/badge/🚀_免费AI接口-gpt.qt.cool-10b981?style=for-the-badge" alt="免费AI接口"></a>
@@ -73,16 +73,16 @@
 
 **平台亮点：**
 
-- **🆓 无限 Token 流量** — 不限调用次数，不限 Token 用量，真正零成本
-- **🤖 主流模型全覆盖** — GPT-5.4、Claude、Gemini、DeepSeek 等热门模型开箱即用
-- **⚡ 即开即用** — 注册即可获取 API Key，兼容 OpenAI 接口格式，无缝对接 OpenClaw
-- **🔒 安全稳定** — 内部公益项目，长期维护，稳定可靠
+- **� 签到领免费额度** — 每日签到 + 邀请好友，持续获取免费使用额度
+- **💰 不满意可退** — 用着不爽随时退款，零风险体验
+- **⚡ 兼容 OpenAI 接口** — 无缝对接 OpenClaw，即开即用
+- **🔒 内部公益项目** — 长期维护，安全稳定
 
 **配合 OpenClaw 使用：**
 
-在 [gpt.qt.cool](https://gpt.qt.cool/) 获取 API Key 后，初始化 OpenClaw 时选择 **OpenAI Compatible** 提供商，填入地址和 Key 即可。支持 GPT-5.4、Claude、Gemini、DeepSeek 等主流模型。
+在 [gpt.qt.cool](https://gpt.qt.cool/) 注册并签到领取免费额度，获取 API Key 后，初始化 OpenClaw 时选择 **OpenAI Compatible** 提供商，填入地址和 Key 即可使用。
 
-> 💡 **省钱小贴士**：搭配 OpenClaw 使用，相当于拥有了一个免费的私人 AI 助手，日常聊天、写代码、处理文档全部零成本！
+> 💡 **小贴士**：每日签到 + 邀请好友即可持续获取免费额度，搭配 OpenClaw 等于拥有一个免费私人 AI 助手！
 
 [立即使用 →](https://gpt.qt.cool/)
 
