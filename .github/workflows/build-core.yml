@@ -229,6 +229,11 @@ jobs:
           
           echo "✅ 核心构建完成"
           
+      - name: 修复 ESM Win32 兼容性
+        run: |
+          echo "🔧 修复 jiti tryNative 在 Windows 上的 ESM URL 错误..."
+          node scripts/patch-esm-win32.mjs openclaw
+
       - name: 构建 Dashboard UI
         working-directory: openclaw
         run: |
