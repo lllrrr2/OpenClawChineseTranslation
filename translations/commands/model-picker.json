@@ -5,7 +5,6 @@
     "\"Filter models by provider\"": "\"按提供商筛选模型\"",
     "\"All providers\"": "\"所有提供商\"",
     "\"Enter model manually\"": "\"手动输入模型\"",
-    "\"auth missing\"": "\"未认证\"",
     "\"reasoning\"": "\"推理\"",
     "\"Default model (blank to keep)\" : \"Default model\"": "\"默认模型（留空保持不变）\" : \"默认模型\"",
     "placeholder: \"provider/model\"": "placeholder: \"提供商/模型名\"",

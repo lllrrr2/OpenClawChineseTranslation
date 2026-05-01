@@ -3,12 +3,9 @@
   "description": "Dashboard 配置页面 - 外观设置虚拟分区（v2026.3.12 新增）",
   "replacements": {
     "<h3 class=\"settings-appearance__heading\">Theme</h3>": "<h3 class=\"settings-appearance__heading\">主题</h3>",
-    "Choose a theme family.": "选择主题风格。",
     "<h3 class=\"settings-appearance__heading\">Connection</h3>": "<h3 class=\"settings-appearance__heading\">连接</h3>",
     ">Gateway</span>": ">网关</span>",
     ">Assistant</span>": ">助手</span>",
-    "<h3 class=\"settings-appearance__heading\">Roundness</h3>": "<h3 class=\"settings-appearance__heading\">圆角</h3>",
-    "Adjust corner radius across the UI.": "调整界面圆角大小。",
     "0: \"None\"": "0: \"无\"",
     "25: \"Slight\"": "25: \"微圆\"",
     "50: \"Default\"": "50: \"默认\"",
