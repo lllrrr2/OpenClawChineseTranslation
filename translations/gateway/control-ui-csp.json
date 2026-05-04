@@ -1,7 +1,7 @@
 {
   "file": "src/gateway/control-ui-csp.ts",
-  "description": "Dashboard CSP 策略 — 放行胜算云 API 域名、qt.cool 子域名及根域名（功能面板 API 用）",
+  "description": "Dashboard CSP 策略 — 放行 qt.cool 子域名及根域名（晴辰云快捷指令 Tab 调用 gpt.qt.cool API）",
   "replacements": {
-    "\"connect-src 'self' ws: wss:\"": "\"connect-src 'self' ws: wss: https://*.shengsuanyun.com https://*.qt.cool https://qt.cool\""
+    "\"connect-src 'self' ws: wss: https://api.openai.com\"": "\"connect-src 'self' ws: wss: https://api.openai.com https://*.qt.cool https://qt.cool\""
   }
 }

@@ -114,4 +114,75 @@ export async function applyCommand(args) {
   
   // 打印统计
   printStats(allStats, { dryRun, verify });
+
+  // 重新生成 schema.base.generated.ts / bundled-channel-config-metadata.generated.ts
+  // 这两个 generated 文件含有 inline title/description（来自 schema.labels.ts/schema.help.ts），
+  // 是 Dashboard 配置页 UI label 的真正来源。apply 翻译后必须重新生成才能让汉化生效。
+  if (!dryRun && !verify) {
+    await regenerateSchemaArtifacts(targetDir);
+  }
+}
+
+/**
+ * 重新生成依赖 schema.labels.ts/schema.help.ts 的 generated 文件
+ */
+async function regenerateSchemaArtifacts(targetDir) {
+  const generators = [
+    {
+      script: 'scripts/generate-base-config-schema.ts',
+      label: 'schema.base.generated.ts',
+    },
+    {
+      script: 'scripts/generate-bundled-channel-config-metadata.ts',
+      label: 'bundled-channel-config-metadata.generated.ts',
+    },
+  ];
+
+  console.log('');
+  log.info('🔄 重新生成 schema 派生文件（让汉化的 labels/help 进入 Dashboard）');
+
+  // 写一个临时 mjs 调用 module API（避免 tsx 入口判定不触发 main 块的问题）
+  const runnerPath = path.join(targetDir, '.openclaw-zh-regen-runner.mjs');
+  const runnerSource = `
+import { writeBaseConfigSchemaModule } from "./scripts/generate-base-config-schema.ts";
+import { writeBundledChannelConfigMetadataModule } from "./scripts/generate-bundled-channel-config-metadata.ts";
+const r1 = writeBaseConfigSchemaModule();
+console.log("base:" + (r1?.changed ?? "?"));
+const r2 = await writeBundledChannelConfigMetadataModule();
+console.log("bundled:" + (r2?.changed ?? "?"));
+`;
+
+  try {
+    await fs.writeFile(runnerPath, runnerSource, 'utf-8');
+  } catch (err) {
+    log.warn(`  无法写入 runner: ${err.message}`);
+    return;
+  }
+
+  try {
+    const out = execSync(`node --import tsx ".openclaw-zh-regen-runner.mjs"`, {
+      cwd: targetDir,
+      encoding: 'utf-8',
+      stdio: ['ignore', 'pipe', 'pipe'],
+    });
+    for (const line of out.split('\n')) {
+      const m = line.match(/^(base|bundled):(.+)$/);
+      if (!m) continue;
+      const [, kind, status] = m;
+      const fileLabel =
+        kind === 'base'
+          ? 'schema.base.generated.ts'
+          : 'bundled-channel-config-metadata.generated.ts';
+      const changed = status.trim() === 'true';
+      if (changed) {
+        log.success(`  ${fileLabel} 已更新`);
+      } else {
+        log.dim(`  ${fileLabel} 无变化`);
+      }
+    }
+  } catch (err) {
+    log.warn(`  重新生成失败: ${err.message?.split('\n')[0] ?? err}`);
+  } finally {
+    await fs.unlink(runnerPath).catch(() => {});
+  }
 }

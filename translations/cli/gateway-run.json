@@ -20,7 +20,6 @@
     ".option(\"--ws-log <style>\", 'WebSocket log style (\"auto\"|\"full\"|\"compact\")', \"auto\")": ".option(\"--ws-log <style>\", 'WebSocket 日志样式（\"auto\"|\"full\"|\"compact\"）', \"auto\")",
     ".option(\"--compact\", 'Alias for \"--ws-log compact\"', false)": ".option(\"--compact\", '\"--ws-log compact\" 的别名', false)",
     ".option(\"--raw-stream\", \"Log raw model stream events to jsonl\", false)": ".option(\"--raw-stream\", \"将原始模型流事件记录到 jsonl\", false)",
-    ".option(\"--raw-stream-path <path>\", \"Raw stream jsonl path\")": ".option(\"--raw-stream-path <path>\", \"原始流 jsonl 路径\")",
-    "\"Gateway recovered automatically after a failed config change and restored the last known good configuration.\"": "\"配置变更失败后网关已自动恢复，并还原了上一次已知正常的配置。\""
+    ".option(\"--raw-stream-path <path>\", \"Raw stream jsonl path\")": ".option(\"--raw-stream-path <path>\", \"原始流 jsonl 路径\")"
   }
 }

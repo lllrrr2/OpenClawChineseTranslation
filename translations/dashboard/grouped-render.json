@@ -4,8 +4,6 @@
   "replacements": {
     "title=\"Delete\"": "title=\"删除\"",
     "aria-label=\"Delete message\"": "aria-label=\"删除消息\"",
-    "\"Stop speaking\"": "\"停止朗读\"",
-    "\"Read aloud\"": "\"朗读\"",
     "alt=${img.alt ?? \"Attached image\"}": "alt=${img.alt ?? \"附件图片\"}",
     "title=\"Open in canvas\"": "title=\"在画布中打开\"",
     "aria-label=\"Open in canvas\"": "aria-label=\"在画布中打开\""

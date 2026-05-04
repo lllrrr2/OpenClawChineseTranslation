@@ -5,7 +5,6 @@
     "\"Filter models by provider\"": "\"按提供商筛选模型\"",
     "\"All providers\"": "\"所有提供商\"",
     "\"Enter model manually\"": "\"手动输入模型\"",
-    "\"auth missing\"": "\"未认证\"",
     "\"reasoning\"": "\"推理\"",
     "\"Default model (blank to keep)\" : \"Default model\"": "\"默认模型（留空保持不变）\" : \"默认模型\"",
     "placeholder: \"provider/model\"": "placeholder: \"提供商/模型名\"",
@@ -15,7 +14,6 @@
     "\"configured (not in catalog)\"": "\"已配置（不在模型目录中）\"",
     "\"Clear the model allowlist? (shows all models)\"": "\"清除模型允许列表？（将显示所有模型）\"",
     "message: \"Remove these provider models from the /model picker?\"": "message: \"从 /model 选择器中移除这些提供商的模型？\"",
-    "hint: `${count} model${count === 1 ? \"\" : \"s\"}`": "hint: `${count} 个模型`",
-    "label: provider,": "label: provider === \"qtcool\" ? \"晴辰云\" : provider === \"shengsuanyun\" ? \"胜算云\" : provider,"
+    "hint: `${count} model${count === 1 ? \"\" : \"s\"}`": "hint: `${count} 个模型`"
   }
 }

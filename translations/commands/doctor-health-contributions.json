@@ -1,7 +1,0 @@
-{
-  "file": "src/flows/doctor-health-contributions.ts",
-  "description": "诊断贡献项（check 标签）",
-  "replacements": {
-    "label: \"Bundled plugin runtime deps\"": "label: \"内置插件运行时依赖\""
-  }
-}

@@ -6,17 +6,11 @@
     "aria-label=\"Remove attachment\"": "aria-label=\"移除附件\"",
     "aria-label=\"Loading chat\"": "aria-label=\"正在加载对话\"",
     ": `Message ${props.assistantName || \"agent\"} (Enter to send)`": ": `消息 ${props.assistantName || \"agent\"} (Enter 发送)`",
-    "<div class=\"chat-queue__title\">Queued (${props.queue.length})</div>": "<div class=\"chat-queue__title\">队列中 (${props.queue.length})</div>",
-    "? `Image (${item.attachments.length})`": "? `图片 (${item.attachments.length})`",
-    "aria-label=\"Remove queued message\"": "aria-label=\"移除队列消息\"",
     "title=\"Attach file\"": "title=\"附加文件\"",
     "placeholder=\"Search messages...\"": "placeholder=\"搜索消息...\"",
     "No matching messages": "没有匹配的消息",
-    "title=\"Steer now\"": "title=\"立即引导\"",
-    "aria-label=\"Steer queued message\"": "aria-label=\"引导排队消息\"",
     "\"Asking OpenClaw...\"": "\"正在请求 OpenClaw...\"",
     "\"Connecting Talk...\"": "\"正在连接对话...\"",
-    "vs.sttRecording ? \"Stop recording\" : \"Voice input\"": "vs.sttRecording ? \"停止录音\" : \"语音输入\"",
     "props.realtimeTalkActive ? \"Stop Talk\" : \"Start Talk\"": "props.realtimeTalkActive ? \"停止对话\" : \"开始对话\""
   }
 }
