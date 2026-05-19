@@ -66,11 +66,6 @@
       "answer": "先卸载原版，再安装汉化版：\n```\nnpm uninstall -g openclaw\nnpm install -g @qingchencloud/openclaw-zh@latest\n```"
     },
     {
-      "id": "config-shengsuanyun",
-      "question": "如何配置胜算云 API（国内聚合平台）？",
-      "answer": "胜算云是国内 API 聚合平台，支持多种 AI 模型。新用户注册可获赠体验金（限时活动，详情以官网为准）。\n\n方法1：通过向导配置\n```\nopenclaw onboard\n```\n选择「胜算云」即可。\n\n方法2：命令行配置（推荐）\n```\nopenclaw onboard --non-interactive --accept-risk --auth-choice shengsuanyun-api-key --shengsuanyun-api-key YOUR_API_KEY --no-install-daemon\nopenclaw config set agents.defaults.model.primary \"shengsuanyun/openai/gpt-4.1-nano\"\n```\n\n方法3：Dashboard AI 创作面板\n打开功能面板 → AI 创作 → 输入 API Key\n\n获取 API Key：https://www.shengsuanyun.com/?from=CH_4BVI0BM2"
-    },
-    {
       "id": "how-to-update",
       "question": "如何更新到最新版？",
       "answer": "npm 环境：\n```\nnpm update -g @qingchencloud/openclaw-zh\n```\n\nDocker 环境：\n```\ndocker pull ghcr.io/1186258278/openclaw-zh:latest\ndocker stop openclaw && docker rm openclaw\n# 重新启动容器\n```"
@@ -105,37 +100,6 @@
       "aiPrompt": ""
     }
   ],
-  "provider": {
-    "name": "胜算云",
-    "description": "国内 API 聚合平台，支持多种 AI 模型",
-    "website": "https://www.shengsuanyun.com",
-    "apiKeyUrl": "https://www.shengsuanyun.com/?from=CH_4BVI0BM2",
-    "affiliateParam": "from=CH_4BVI0BM2",
-    "apiBase": "https://router.shengsuanyun.com/api/v1",
-    "modelsApi": "https://router.shengsuanyun.com/api/v1/models",
-    "multimodalApi": "https://router.shengsuanyun.com/api/v1/models/multimodal",
-    "defaultLlmModel": "openai/gpt-4.1-nano",
-    "defaultImageModel": "ali/z-image-turbo",
-    "defaultVideoModel": "google/veo3.1-fast-preview",
-    "defaultAudioModel": "runway/eleven_text_to_sound_v2",
-    "preferredLlmModels": [
-      "openai/gpt-4.1-nano",
-      "openai/o4-mini",
-      "deepseek/deepseek-v3.2",
-      "anthropic/claude-sonnet-4.5",
-      "google/gemini-2.5-flash"
-    ],
-    "modelCacheTtlMs": 300000,
-    "multimodalEnabled": true,
-    "multimodalBadgeText": "内测中",
-    "promoText": "🎁 新用户送10元",
-    "promoNote": "限时活动，详情以官网为准",
-    "getKeyText": "点此获取 API Key",
-    "footerText": "生成的内容仅供参考 · API 费用由胜算云收取",
-    "footerLink": "了解更多",
-    "cooperationLink": "",
-    "cooperationText": "商务合作"
-  },
   "about": {
     "project": "OpenClaw 汉化发行版",
     "company": "武汉晴辰天下网络科技有限公司",

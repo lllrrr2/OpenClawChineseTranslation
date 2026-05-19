@@ -9,7 +9,7 @@
     "<span>Global</span>": "<span>全局</span>",
     "<span>Unknown</span>": "<span>未知</span>",
     "`Store: ${props.result.path}`": "`存储路径：${props.result.path}`",
-    "placeholder=\"Filter by key, label, kind…\"": "placeholder=\"按密钥、标签、类型筛选…\"",
+    "placeholder=\"Filter by key, agent, label, kind…\"": "placeholder=\"按密钥、代理、标签、类型筛选…\"",
     "sortHeader(\"key\", \"Key\", \"data-table-key-col\")": "sortHeader(\"key\", \"密钥\", \"data-table-key-col\")",
     "<th>Label</th>": "<th>标签</th>",
     "sortHeader(\"kind\", \"Kind\")": "sortHeader(\"kind\", \"类型\")",
